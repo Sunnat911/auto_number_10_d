@@ -1,0 +1,43 @@
+<aside
+        class="sidebar"
+        th:fragment="sidebar"
+        xmlns:th="http://www.thymeleaf.org">
+
+    <section>
+        <!-- sidebar-brand  -->
+        <div class="sidebar-brand">
+            <strong>Avto Raqam</strong>
+        </div>
+        <input type="text" hidden th:value="${active_sidebar_item}" id="active_sidebar_number">
+        <div>
+            <ul data-widget="tree">
+                <li id="first_li">
+                    <a th:href="@{/api/admin/auto/number/list}">
+                        <i class="fa fa-circle-o"></i><span>Avto raqam</span>
+                    </a>
+                </li>
+                <li id="second_li">
+                    <a th:href="@{/api/admin/auction/list}">
+                        <i class="fa fa-circle-o"></i><span>Auction</span>
+                    </a>
+                </li>
+
+                <li id="third_li">
+                    <a th:href="@{/api/admin/region/list}">
+                        <i class="fa fa-circle-o"></i><span>region</span>
+                    </a>
+                </li>
+                <li id="fifth_li">
+                    <a th:href="@{/api/admin/user/list}">
+                        <i class="fa fa-circle-o"></i><span>user</span>
+                    </a>
+                </li>
+                <li id="tent_li">
+                    <a style="color: red;" th:href="@{/logout}">
+                        <i class="fa fa-circle-o"></i> <span>Выход</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</aside>
